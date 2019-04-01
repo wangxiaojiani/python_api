@@ -1,0 +1,41 @@
+我是Python14期的主讲老师：华华
+this is warning msg
+我今天缺课了！
+this is critical msg
+我是Python14期的主讲老师：华华
+this is warning msg
+我今天缺课了！
+this is critical msg
+我是Python14期的主讲老师：华华
+this is warning msg
+我今天缺课了！
+this is critical msg
+2019-02-27 21:24:50,634-INFO-logging模块.py-python14-日志信息:我是Python14期的主讲老师：华华
+2019-02-27 21:24:50,634-WARNING-logging模块.py-python14-日志信息:this is warning msg
+2019-02-27 21:24:50,634-ERROR-logging模块.py-python14-日志信息:我今天缺课了！
+2019-02-27 21:24:50,634-CRITICAL-logging模块.py-python14-日志信息:this is critical msg
+2019-02-27 21:30:31,518-[INFO]-日志信息:我是Python14期的主讲老师：华华
+2019-02-27 21:30:31,519-[WARNING]-日志信息:this is warning msg
+2019-02-27 21:30:31,519-[ERROR]-日志信息:我今天缺课了！
+2019-02-27 21:30:31,519-[CRITICAL]-日志信息:this is critical msg
+[2019-02-27 21:30:39,174]-[INFO]-日志信息:我是Python14期的主讲老师：华华
+[2019-02-27 21:30:39,175]-[WARNING]-日志信息:this is warning msg
+[2019-02-27 21:30:39,175]-[ERROR]-日志信息:我今天缺课了！
+[2019-02-27 21:30:39,175]-[CRITICAL]-日志信息:this is critical msg
+[2019-02-27 21:30:52,858]-[INFO]-[日志信息]:我是Python14期的主讲老师：华华
+[2019-02-27 21:30:52,858]-[WARNING]-[日志信息]:this is warning msg
+[2019-02-27 21:30:52,858]-[ERROR]-[日志信息]:我今天缺课了！
+[2019-02-27 21:30:52,858]-[CRITICAL]-[日志信息]:this is critical msg
+[2019-02-27 21:32:09,368]-[INFO]-[日志信息]:我是Python14期的主讲老师：华华
+[2019-02-27 21:32:09,368]-[WARNING]-[日志信息]:this is warning msg
+[2019-02-27 21:32:09,368]-[ERROR]-[日志信息]:我今天缺课了！
+[2019-02-27 21:32:09,368]-[CRITICAL]-[日志信息]:this is critical msg
+[2019-02-27 21:36:44,878]-[INFO]-[日志信息]:我是Python14期的主讲老师：华华
+[2019-02-27 21:36:44,879]-[WARNING]-[日志信息]:this is warning msg
+[2019-02-27 21:36:44,879]-[ERROR]-[日志信息]:我今天缺课了！
+[2019-02-27 21:36:44,879]-[CRITICAL]-[日志信息]:this is critical msg
+[2019-02-27 21:40:10,193]-[ERROR]-[日志信息]:公司突然停电了
+[2019-02-27 21:42:14,863]-[INFO]-[日志信息]:娃哈哈  乌漆嘛黑的！
+[2019-02-27 21:43:03,774]-[INFO]-[日志信息]:娃哈哈  乌漆嘛黑的！
+[2019-02-27 21:47:25,161]-[INFO]-[日志信息]:娃哈哈  乌漆嘛黑的！
+[2019-02-27 21:47:51,609]-[INFO]-[日志信息]:娃哈哈  乌漆嘛黑的！
