@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="18f9a326-7ca3-4750-9e7c-9406e25c5bc9" name="Default" comment="更改syspath">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/test_auto_interface/runner.py" afterPath="$PROJECT_DIR$/test_auto_interface/runner.py" />
+      <change beforePath="$PROJECT_DIR$/test_auto_interface/result/test_result_19-10-02.html" afterPath="$PROJECT_DIR$/test_auto_interface/result/test_result/test_result_19-10-02.html" />
+      <change beforePath="$PROJECT_DIR$/test_auto_interface/result/test_result_19-10-06.html" afterPath="$PROJECT_DIR$/test_auto_interface/result/test_result/test_result_19-10-06.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -187,7 +188,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="708" />
     <option name="y" value="3" />
     <option name="width" value="665" />
@@ -244,6 +245,19 @@
               <item name="learning_python_class" type="462c0819:PsiDirectoryNode" />
               <item name="test_auto_interface" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="learning_python_class" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learning_python_class" type="462c0819:PsiDirectoryNode" />
+              <item name="test_auto_interface" type="462c0819:PsiDirectoryNode" />
+              <item name="result" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learning_python_class" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learning_python_class" type="462c0819:PsiDirectoryNode" />
+              <item name="test_auto_interface" type="462c0819:PsiDirectoryNode" />
+              <item name="result" type="462c0819:PsiDirectoryNode" />
+              <item name="test_result" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -257,15 +271,15 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\learning_python_class\api_project_2\test_data" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\learning_python_class\test_auto_interface\result\test_result" />
       <recent name="E:\learning_python_class\api_project_3\web_auto" />
       <recent name="E:\learning_python_class\api_project_3\test_data" />
       <recent name="E:\learning_python_class\api_project_2\case_conf" />
       <recent name="E:\learning_python_class\api_project_2\common" />
-      <recent name="E:\learning_python_class\homework_package\work_20190308" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\learning_python_class\api_project_2\test_data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -462,8 +476,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31466228" sideWeight="0.3517398" order="7" side_tool="true" content_ui="tabs" />
@@ -471,7 +484,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31466228" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2306425" sideWeight="0.64826024" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39209226" sideWeight="0.49377915" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22995462" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22995462" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -883,10 +896,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_auto_interface/result/test_result_19-10-06.html">
+    <entry file="file://$PROJECT_DIR$/test_auto_interface/result/test_result/test_result_19-10-06.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
