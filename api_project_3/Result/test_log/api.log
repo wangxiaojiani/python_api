@@ -9638,3 +9638,550 @@ Diff is 3675348 characters long. Set self.maxDiff to None to see it.
 [2019-04-01 12:49:11,253]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是对不存在的标进行投资
 [2019-04-01 12:49:11,254]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'Invets', 'Title': '对不存在的标进行投资', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/bidLoan', 'Params': "{'memberId':'member_id','password':'123456','loanId':17500111,'amount':100}", 'Sql': None, 'ExpectResult': "{'status': 0, 'code': '11009', 'data': None, 'msg': '不存在该标的'}"}
 [2019-04-01 12:49:11,480]-[INFO]-[日志信息]:=====第7条用例结束======
+[2019-04-01 14:42:00,238]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册
+[2019-04-01 14:42:00,238]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100063",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}
+[2019-04-01 14:42:00,519]-[INFO]-[日志信息]:=====第1条用例结束======
+[2019-04-01 14:42:00,520]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号
+[2019-04-01 14:42:00,520]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}
+[2019-04-01 14:42:00,724]-[INFO]-[日志信息]:=====第2条用例结束======
+[2019-04-01 14:42:00,724]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册
+[2019-04-01 14:42:00,725]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}
+[2019-04-01 14:42:00,940]-[INFO]-[日志信息]:=====第3条用例结束======
+[2019-04-01 14:42:00,940]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册
+[2019-04-01 14:42:00,941]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}
+[2019-04-01 14:42:01,141]-[INFO]-[日志信息]:=====第4条用例结束======
+[2019-04-01 14:42:01,142]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册
+[2019-04-01 14:42:01,142]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 14:42:01,366]-[INFO]-[日志信息]:=====第5条用例结束======
+[2019-04-01 14:42:01,367]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册
+[2019-04-01 14:42:01,367]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 14:42:01,567]-[INFO]-[日志信息]:=====第6条用例结束======
+[2019-04-01 14:42:01,568]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册
+[2019-04-01 14:42:01,568]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 14:42:01,766]-[INFO]-[日志信息]:=====第7条用例结束======
+[2019-04-01 14:51:03,538]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册
+[2019-04-01 14:51:03,538]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100064",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}
+[2019-04-01 14:51:03,784]-[INFO]-[日志信息]:=====第1条用例结束======
+[2019-04-01 14:51:03,785]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号
+[2019-04-01 14:51:03,785]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}
+[2019-04-01 14:51:03,984]-[INFO]-[日志信息]:=====第2条用例结束======
+[2019-04-01 14:51:03,985]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册
+[2019-04-01 14:51:03,985]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}
+[2019-04-01 14:51:04,266]-[INFO]-[日志信息]:=====第3条用例结束======
+[2019-04-01 14:51:04,266]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册
+[2019-04-01 14:51:04,266]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}
+[2019-04-01 14:51:04,462]-[INFO]-[日志信息]:=====第4条用例结束======
+[2019-04-01 14:51:04,463]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册
+[2019-04-01 14:51:04,463]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 14:51:04,670]-[INFO]-[日志信息]:=====第5条用例结束======
+[2019-04-01 14:51:04,671]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册
+[2019-04-01 14:51:04,671]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 14:51:04,870]-[INFO]-[日志信息]:=====第6条用例结束======
+[2019-04-01 14:51:04,871]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册
+[2019-04-01 14:51:04,871]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 14:51:05,068]-[INFO]-[日志信息]:=====第7条用例结束======
+[2019-04-01 15:00:43,719]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册
+[2019-04-01 15:00:43,719]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100065",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}
+[2019-04-01 15:00:44,171]-[INFO]-[日志信息]:=====第1条用例结束======
+[2019-04-01 15:00:44,172]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号
+[2019-04-01 15:00:44,172]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}
+[2019-04-01 15:00:44,431]-[INFO]-[日志信息]:=====第2条用例结束======
+[2019-04-01 15:00:44,432]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册
+[2019-04-01 15:00:44,432]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}
+[2019-04-01 15:00:45,072]-[INFO]-[日志信息]:=====第3条用例结束======
+[2019-04-01 15:00:45,074]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册
+[2019-04-01 15:00:45,074]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}
+[2019-04-01 15:00:45,326]-[INFO]-[日志信息]:=====第4条用例结束======
+[2019-04-01 15:00:45,327]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册
+[2019-04-01 15:00:45,327]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 15:00:46,012]-[INFO]-[日志信息]:=====第5条用例结束======
+[2019-04-01 15:00:46,013]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册
+[2019-04-01 15:00:46,013]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 15:00:46,219]-[INFO]-[日志信息]:=====第6条用例结束======
+[2019-04-01 15:00:46,220]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册
+[2019-04-01 15:00:46,220]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 15:00:46,435]-[INFO]-[日志信息]:=====第7条用例结束======
+[2019-04-01 15:22:00,645]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册
+[2019-04-01 15:22:00,646]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100066",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}
+[2019-04-01 15:22:00,864]-[INFO]-[日志信息]:=====第1条用例结束======
+[2019-04-01 15:22:00,865]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号
+[2019-04-01 15:22:00,865]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}
+[2019-04-01 15:22:01,112]-[INFO]-[日志信息]:=====第2条用例结束======
+[2019-04-01 15:22:01,112]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册
+[2019-04-01 15:22:01,112]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}
+[2019-04-01 15:22:01,320]-[INFO]-[日志信息]:=====第3条用例结束======
+[2019-04-01 15:22:01,321]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册
+[2019-04-01 15:22:01,321]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}
+[2019-04-01 15:22:01,531]-[INFO]-[日志信息]:=====第4条用例结束======
+[2019-04-01 15:22:01,531]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册
+[2019-04-01 15:22:01,531]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 15:22:01,732]-[INFO]-[日志信息]:=====第5条用例结束======
+[2019-04-01 15:22:01,733]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册
+[2019-04-01 15:22:01,733]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 15:22:01,936]-[INFO]-[日志信息]:=====第6条用例结束======
+[2019-04-01 15:22:01,937]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册
+[2019-04-01 15:22:01,937]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 15:22:02,169]-[INFO]-[日志信息]:=====第7条用例结束======
+[2019-04-01 15:51:31,424]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册
+[2019-04-01 15:51:31,424]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100067",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}
+[2019-04-01 15:51:31,645]-[INFO]-[日志信息]:=====第1条用例结束======
+[2019-04-01 15:51:31,645]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号
+[2019-04-01 15:51:31,646]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}
+[2019-04-01 15:51:31,851]-[INFO]-[日志信息]:=====第2条用例结束======
+[2019-04-01 15:51:31,852]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册
+[2019-04-01 15:51:31,852]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}
+[2019-04-01 15:51:32,053]-[INFO]-[日志信息]:=====第3条用例结束======
+[2019-04-01 15:51:32,054]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册
+[2019-04-01 15:51:32,054]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}
+[2019-04-01 15:51:32,260]-[INFO]-[日志信息]:=====第4条用例结束======
+[2019-04-01 15:51:32,261]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册
+[2019-04-01 15:51:32,261]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 15:51:32,463]-[INFO]-[日志信息]:=====第5条用例结束======
+[2019-04-01 15:51:32,464]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册
+[2019-04-01 15:51:32,464]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 15:51:32,665]-[INFO]-[日志信息]:=====第6条用例结束======
+[2019-04-01 15:51:32,666]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册
+[2019-04-01 15:51:32,666]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 15:51:32,870]-[INFO]-[日志信息]:=====第7条用例结束======
+[2019-04-01 16:04:00,071]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册
+[2019-04-01 16:04:00,071]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100068",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}
+[2019-04-01 16:04:00,373]-[INFO]-[日志信息]:=====第1条用例结束======
+[2019-04-01 16:04:00,374]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号
+[2019-04-01 16:04:00,374]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}
+[2019-04-01 16:04:00,707]-[INFO]-[日志信息]:=====第2条用例结束======
+[2019-04-01 16:04:00,708]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册
+[2019-04-01 16:04:00,708]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}
+[2019-04-01 16:04:01,150]-[INFO]-[日志信息]:=====第3条用例结束======
+[2019-04-01 16:04:01,154]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册
+[2019-04-01 16:04:01,154]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}
+[2019-04-01 16:04:01,454]-[INFO]-[日志信息]:=====第4条用例结束======
+[2019-04-01 16:04:01,455]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册
+[2019-04-01 16:04:01,455]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 16:04:01,886]-[INFO]-[日志信息]:=====第5条用例结束======
+[2019-04-01 16:04:01,886]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册
+[2019-04-01 16:04:01,886]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 16:04:02,166]-[INFO]-[日志信息]:=====第6条用例结束======
+[2019-04-01 16:04:02,167]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册
+[2019-04-01 16:04:02,168]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 16:04:02,441]-[INFO]-[日志信息]:=====第7条用例结束======
+[2019-04-01 16:33:32,089]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册
+[2019-04-01 16:33:32,089]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100069",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}
+[2019-04-01 16:33:32,352]-[INFO]-[日志信息]:=====第1条用例结束======
+[2019-04-01 16:33:32,354]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号
+[2019-04-01 16:33:32,354]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}
+[2019-04-01 16:33:32,629]-[INFO]-[日志信息]:=====第2条用例结束======
+[2019-04-01 16:33:32,630]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册
+[2019-04-01 16:33:32,631]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}
+[2019-04-01 16:33:32,856]-[INFO]-[日志信息]:=====第3条用例结束======
+[2019-04-01 16:33:32,857]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册
+[2019-04-01 16:33:32,858]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}
+[2019-04-01 16:33:33,077]-[INFO]-[日志信息]:=====第4条用例结束======
+[2019-04-01 16:33:33,079]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册
+[2019-04-01 16:33:33,080]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 16:33:33,401]-[INFO]-[日志信息]:=====第5条用例结束======
+[2019-04-01 16:33:33,403]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册
+[2019-04-01 16:33:33,403]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 16:33:33,695]-[INFO]-[日志信息]:=====第6条用例结束======
+[2019-04-01 16:33:33,697]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册
+[2019-04-01 16:33:33,697]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 16:33:33,957]-[INFO]-[日志信息]:=====第7条用例结束======
+[2019-04-01 16:41:53,896]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册
+[2019-04-01 16:41:53,897]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100070",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}
+[2019-04-01 16:41:54,120]-[INFO]-[日志信息]:=====第1条用例结束======
+[2019-04-01 16:41:54,122]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号
+[2019-04-01 16:41:54,122]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}
+[2019-04-01 16:41:54,334]-[INFO]-[日志信息]:=====第2条用例结束======
+[2019-04-01 16:41:54,336]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册
+[2019-04-01 16:41:54,336]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}
+[2019-04-01 16:41:54,548]-[INFO]-[日志信息]:=====第3条用例结束======
+[2019-04-01 16:41:54,549]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册
+[2019-04-01 16:41:54,550]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}
+[2019-04-01 16:41:54,920]-[INFO]-[日志信息]:=====第4条用例结束======
+[2019-04-01 16:41:54,922]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册
+[2019-04-01 16:41:54,922]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 16:41:55,155]-[INFO]-[日志信息]:=====第5条用例结束======
+[2019-04-01 16:41:55,157]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册
+[2019-04-01 16:41:55,157]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 16:41:55,372]-[INFO]-[日志信息]:=====第6条用例结束======
+[2019-04-01 16:41:55,373]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册
+[2019-04-01 16:41:55,373]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 16:41:55,599]-[INFO]-[日志信息]:=====第7条用例结束======
+[2019-04-01 18:54:45,922]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册
+[2019-04-01 18:54:45,923]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100071",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}
+[2019-04-01 18:54:46,160]-[INFO]-[日志信息]:=====第1条用例结束======
+[2019-04-01 18:54:46,161]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号
+[2019-04-01 18:54:46,161]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}
+[2019-04-01 18:54:46,369]-[INFO]-[日志信息]:=====第2条用例结束======
+[2019-04-01 18:54:46,369]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册
+[2019-04-01 18:54:46,369]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}
+[2019-04-01 18:54:46,578]-[INFO]-[日志信息]:=====第3条用例结束======
+[2019-04-01 18:54:46,579]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册
+[2019-04-01 18:54:46,579]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}
+[2019-04-01 18:54:46,863]-[INFO]-[日志信息]:=====第4条用例结束======
+[2019-04-01 18:54:46,864]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册
+[2019-04-01 18:54:46,864]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 18:54:47,072]-[INFO]-[日志信息]:=====第5条用例结束======
+[2019-04-01 18:54:47,072]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册
+[2019-04-01 18:54:47,073]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 18:54:47,281]-[INFO]-[日志信息]:=====第6条用例结束======
+[2019-04-01 18:54:47,281]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册
+[2019-04-01 18:54:47,282]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 18:54:47,598]-[INFO]-[日志信息]:=====第7条用例结束======
+[2019-04-01 19:00:30,572]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册
+[2019-04-01 19:00:30,572]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100072",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}
+[2019-04-01 19:00:30,803]-[INFO]-[日志信息]:=====第1条用例结束======
+[2019-04-01 19:00:30,804]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号
+[2019-04-01 19:00:30,804]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}
+[2019-04-01 19:00:31,025]-[INFO]-[日志信息]:=====第2条用例结束======
+[2019-04-01 19:00:31,026]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册
+[2019-04-01 19:00:31,026]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}
+[2019-04-01 19:00:31,266]-[INFO]-[日志信息]:=====第3条用例结束======
+[2019-04-01 19:00:31,267]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册
+[2019-04-01 19:00:31,267]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}
+[2019-04-01 19:00:31,482]-[INFO]-[日志信息]:=====第4条用例结束======
+[2019-04-01 19:00:31,483]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册
+[2019-04-01 19:00:31,483]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 19:00:31,733]-[INFO]-[日志信息]:=====第5条用例结束======
+[2019-04-01 19:00:31,734]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册
+[2019-04-01 19:00:31,734]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 19:00:31,965]-[INFO]-[日志信息]:=====第6条用例结束======
+[2019-04-01 19:00:31,966]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册
+[2019-04-01 19:00:31,967]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 19:00:32,249]-[INFO]-[日志信息]:=====第7条用例结束======
+[2019-04-01 19:00:38,315]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册
+[2019-04-01 19:00:38,315]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100073",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}
+[2019-04-01 19:00:38,551]-[INFO]-[日志信息]:=====第1条用例结束======
+[2019-04-01 19:00:38,552]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号
+[2019-04-01 19:00:38,552]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}
+[2019-04-01 19:00:38,773]-[INFO]-[日志信息]:=====第2条用例结束======
+[2019-04-01 19:00:38,773]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册
+[2019-04-01 19:00:38,773]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}
+[2019-04-01 19:00:38,994]-[INFO]-[日志信息]:=====第3条用例结束======
+[2019-04-01 19:00:38,994]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册
+[2019-04-01 19:00:38,994]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}
+[2019-04-01 19:00:39,226]-[INFO]-[日志信息]:=====第4条用例结束======
+[2019-04-01 19:00:39,227]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册
+[2019-04-01 19:00:39,227]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 19:00:39,443]-[INFO]-[日志信息]:=====第5条用例结束======
+[2019-04-01 19:00:39,443]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册
+[2019-04-01 19:00:39,443]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 19:00:39,652]-[INFO]-[日志信息]:=====第6条用例结束======
+[2019-04-01 19:00:39,652]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册
+[2019-04-01 19:00:39,652]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 19:00:39,865]-[INFO]-[日志信息]:=====第7条用例结束======
+[2019-04-01 19:07:54,535]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册
+[2019-04-01 19:07:54,535]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100074",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}
+[2019-04-01 19:07:54,786]-[INFO]-[日志信息]:=====第1条用例结束======
+[2019-04-01 19:07:54,786]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号
+[2019-04-01 19:07:54,786]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}
+[2019-04-01 19:07:55,003]-[INFO]-[日志信息]:=====第2条用例结束======
+[2019-04-01 19:07:55,003]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册
+[2019-04-01 19:07:55,003]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}
+[2019-04-01 19:07:55,206]-[INFO]-[日志信息]:=====第3条用例结束======
+[2019-04-01 19:07:55,207]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册
+[2019-04-01 19:07:55,207]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}
+[2019-04-01 19:07:55,432]-[INFO]-[日志信息]:=====第4条用例结束======
+[2019-04-01 19:07:55,432]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册
+[2019-04-01 19:07:55,432]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 19:07:55,670]-[INFO]-[日志信息]:=====第5条用例结束======
+[2019-04-01 19:07:55,670]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册
+[2019-04-01 19:07:55,670]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 19:07:55,879]-[INFO]-[日志信息]:=====第6条用例结束======
+[2019-04-01 19:07:55,879]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册
+[2019-04-01 19:07:55,879]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-01 19:07:56,109]-[INFO]-[日志信息]:=====第7条用例结束======
+[2019-04-03 09:22:23,295]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册
+[2019-04-03 09:22:23,312]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100075",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}
+[2019-04-03 09:22:23,587]-[INFO]-[日志信息]:=====第1条用例结束======
+[2019-04-03 09:22:23,588]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号
+[2019-04-03 09:22:23,588]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}
+[2019-04-03 09:22:23,799]-[INFO]-[日志信息]:=====第2条用例结束======
+[2019-04-03 09:22:23,800]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册
+[2019-04-03 09:22:23,800]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}
+[2019-04-03 09:22:23,985]-[INFO]-[日志信息]:=====第3条用例结束======
+[2019-04-03 09:22:23,986]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册
+[2019-04-03 09:22:23,986]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}
+[2019-04-03 09:22:24,172]-[INFO]-[日志信息]:=====第4条用例结束======
+[2019-04-03 09:22:24,173]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册
+[2019-04-03 09:22:24,173]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-03 09:22:24,365]-[INFO]-[日志信息]:=====第5条用例结束======
+[2019-04-03 09:22:24,366]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册
+[2019-04-03 09:22:24,366]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-03 09:22:24,546]-[INFO]-[日志信息]:=====第6条用例结束======
+[2019-04-03 09:22:24,546]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册
+[2019-04-03 09:22:24,546]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-03 09:22:24,758]-[INFO]-[日志信息]:=====第7条用例结束======
+[2019-04-03 09:32:38,088]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册
+[2019-04-03 09:32:38,089]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100076",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}
+[2019-04-03 09:32:38,312]-[INFO]-[日志信息]:=====第1条用例结束======
+[2019-04-03 09:32:38,313]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号
+[2019-04-03 09:32:38,313]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}
+[2019-04-03 09:32:38,544]-[INFO]-[日志信息]:=====第2条用例结束======
+[2019-04-03 09:32:38,544]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册
+[2019-04-03 09:32:38,544]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}
+[2019-04-03 09:32:38,751]-[INFO]-[日志信息]:=====第3条用例结束======
+[2019-04-03 09:32:38,751]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册
+[2019-04-03 09:32:38,752]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}
+[2019-04-03 09:32:38,982]-[INFO]-[日志信息]:=====第4条用例结束======
+[2019-04-03 09:32:38,982]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册
+[2019-04-03 09:32:38,982]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-03 09:32:39,210]-[INFO]-[日志信息]:=====第5条用例结束======
+[2019-04-03 09:32:39,210]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册
+[2019-04-03 09:32:39,210]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-03 09:32:39,399]-[INFO]-[日志信息]:=====第6条用例结束======
+[2019-04-03 09:32:39,400]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册
+[2019-04-03 09:32:39,400]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-03 09:32:39,591]-[INFO]-[日志信息]:=====第7条用例结束======
+[2019-04-03 09:36:19,221]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册
+[2019-04-03 09:36:19,222]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100077",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}
+[2019-04-03 09:36:19,482]-[INFO]-[日志信息]:=====第1条用例结束======
+[2019-04-03 09:36:19,482]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号
+[2019-04-03 09:36:19,482]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}
+[2019-04-03 09:36:19,681]-[INFO]-[日志信息]:=====第2条用例结束======
+[2019-04-03 09:36:19,681]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册
+[2019-04-03 09:36:19,681]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}
+[2019-04-03 09:36:19,876]-[INFO]-[日志信息]:=====第3条用例结束======
+[2019-04-03 09:36:19,876]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册
+[2019-04-03 09:36:19,876]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}
+[2019-04-03 09:36:20,107]-[INFO]-[日志信息]:=====第4条用例结束======
+[2019-04-03 09:36:20,107]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册
+[2019-04-03 09:36:20,107]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-03 09:36:20,299]-[INFO]-[日志信息]:=====第5条用例结束======
+[2019-04-03 09:36:20,299]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册
+[2019-04-03 09:36:20,299]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-03 09:36:20,493]-[INFO]-[日志信息]:=====第6条用例结束======
+[2019-04-03 09:36:20,493]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册
+[2019-04-03 09:36:20,494]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-03 09:36:20,684]-[INFO]-[日志信息]:=====第7条用例结束======
+[2019-04-03 09:42:42,745]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册
+[2019-04-03 09:42:42,746]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100078",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}
+[2019-04-03 09:42:42,952]-[INFO]-[日志信息]:=====第1条用例结束======
+[2019-04-03 09:42:42,953]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号
+[2019-04-03 09:42:42,953]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}
+[2019-04-03 09:42:43,166]-[INFO]-[日志信息]:=====第2条用例结束======
+[2019-04-03 09:42:43,166]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册
+[2019-04-03 09:42:43,166]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}
+[2019-04-03 09:42:43,380]-[INFO]-[日志信息]:=====第3条用例结束======
+[2019-04-03 09:42:43,381]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册
+[2019-04-03 09:42:43,381]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}
+[2019-04-03 09:42:43,617]-[INFO]-[日志信息]:=====第4条用例结束======
+[2019-04-03 09:42:43,618]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册
+[2019-04-03 09:42:43,618]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-03 09:42:43,822]-[INFO]-[日志信息]:=====第5条用例结束======
+[2019-04-03 09:42:43,822]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册
+[2019-04-03 09:42:43,822]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-03 09:42:44,098]-[INFO]-[日志信息]:=====第6条用例结束======
+[2019-04-03 09:42:44,099]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册
+[2019-04-03 09:42:44,099]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-03 09:42:44,315]-[INFO]-[日志信息]:=====第7条用例结束======
+[2019-04-03 09:43:14,953]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册
+[2019-04-03 09:43:14,953]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100079",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}
+[2019-04-03 09:43:15,210]-[INFO]-[日志信息]:=====第1条用例结束======
+[2019-04-03 09:43:15,210]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号
+[2019-04-03 09:43:15,210]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}
+[2019-04-03 09:43:15,433]-[INFO]-[日志信息]:=====第2条用例结束======
+[2019-04-03 09:43:15,434]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册
+[2019-04-03 09:43:15,434]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}
+[2019-04-03 09:43:15,697]-[INFO]-[日志信息]:=====第3条用例结束======
+[2019-04-03 09:43:15,697]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册
+[2019-04-03 09:43:15,697]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}
+[2019-04-03 09:43:15,927]-[INFO]-[日志信息]:=====第4条用例结束======
+[2019-04-03 09:43:15,927]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册
+[2019-04-03 09:43:15,927]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-03 09:43:16,132]-[INFO]-[日志信息]:=====第5条用例结束======
+[2019-04-03 09:43:16,133]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册
+[2019-04-03 09:43:16,133]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-03 09:43:16,343]-[INFO]-[日志信息]:=====第6条用例结束======
+[2019-04-03 09:43:16,343]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册
+[2019-04-03 09:43:16,343]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-03 09:43:16,552]-[INFO]-[日志信息]:=====第7条用例结束======
+[2019-04-03 09:44:17,386]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册
+[2019-04-03 09:44:17,386]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100080",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}
+[2019-04-03 09:44:17,632]-[INFO]-[日志信息]:=====第1条用例结束======
+[2019-04-03 09:44:17,633]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号
+[2019-04-03 09:44:17,633]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}
+[2019-04-03 09:44:17,848]-[INFO]-[日志信息]:=====第2条用例结束======
+[2019-04-03 09:44:17,848]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册
+[2019-04-03 09:44:17,849]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}
+[2019-04-03 09:44:18,047]-[INFO]-[日志信息]:=====第3条用例结束======
+[2019-04-03 09:44:18,047]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册
+[2019-04-03 09:44:18,048]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}
+[2019-04-03 09:44:18,265]-[INFO]-[日志信息]:=====第4条用例结束======
+[2019-04-03 09:44:18,266]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册
+[2019-04-03 09:44:18,266]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-03 09:44:18,512]-[INFO]-[日志信息]:=====第5条用例结束======
+[2019-04-03 09:44:18,512]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册
+[2019-04-03 09:44:18,512]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-03 09:44:18,722]-[INFO]-[日志信息]:=====第6条用例结束======
+[2019-04-03 09:44:18,722]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册
+[2019-04-03 09:44:18,722]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-03 09:44:18,945]-[INFO]-[日志信息]:=====第7条用例结束======
+[2019-04-03 10:07:13,155]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册
+[2019-04-03 10:07:13,155]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100081",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}
+[2019-04-03 10:07:13,458]-[INFO]-[日志信息]:=====第1条用例结束======
+[2019-04-03 10:07:13,459]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号
+[2019-04-03 10:07:13,459]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}
+[2019-04-03 10:07:13,687]-[INFO]-[日志信息]:=====第2条用例结束======
+[2019-04-03 10:07:13,688]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册
+[2019-04-03 10:07:13,688]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}
+[2019-04-03 10:07:13,955]-[INFO]-[日志信息]:=====第3条用例结束======
+[2019-04-03 10:07:13,955]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册
+[2019-04-03 10:07:13,955]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}
+[2019-04-03 10:07:14,198]-[INFO]-[日志信息]:=====第4条用例结束======
+[2019-04-03 10:07:14,198]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册
+[2019-04-03 10:07:14,198]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-03 10:07:14,414]-[INFO]-[日志信息]:=====第5条用例结束======
+[2019-04-03 10:07:14,415]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册
+[2019-04-03 10:07:14,415]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-03 10:07:14,614]-[INFO]-[日志信息]:=====第6条用例结束======
+[2019-04-03 10:07:14,614]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册
+[2019-04-03 10:07:14,615]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}
+[2019-04-03 10:07:14,808]-[INFO]-[日志信息]:=====第7条用例结束======
+[2019-04-04 09:08:14,906]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册-【E:\learning_python_class\api_project_3\common\my_log.py】
+[2019-04-04 09:08:14,913]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100082",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】
+[2019-04-04 09:08:15,181]-[INFO]-[日志信息]:=====第1条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】
+[2019-04-04 09:08:15,181]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号-【E:\learning_python_class\api_project_3\common\my_log.py】
+[2019-04-04 09:08:15,181]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】
+[2019-04-04 09:08:15,397]-[INFO]-[日志信息]:=====第2条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】
+[2019-04-04 09:08:15,398]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册-【E:\learning_python_class\api_project_3\common\my_log.py】
+[2019-04-04 09:08:15,398]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】
+[2019-04-04 09:08:15,586]-[INFO]-[日志信息]:=====第3条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】
+[2019-04-04 09:08:15,586]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册-【E:\learning_python_class\api_project_3\common\my_log.py】
+[2019-04-04 09:08:15,586]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】
+[2019-04-04 09:08:15,814]-[INFO]-[日志信息]:=====第4条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】
+[2019-04-04 09:08:15,815]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册-【E:\learning_python_class\api_project_3\common\my_log.py】
+[2019-04-04 09:08:15,815]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】
+[2019-04-04 09:08:16,020]-[INFO]-[日志信息]:=====第5条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】
+[2019-04-04 09:08:16,021]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册-【E:\learning_python_class\api_project_3\common\my_log.py】
+[2019-04-04 09:08:16,021]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】
+[2019-04-04 09:08:16,232]-[INFO]-[日志信息]:=====第6条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】
+[2019-04-04 09:08:16,232]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册-【E:\learning_python_class\api_project_3\common\my_log.py】
+[2019-04-04 09:08:16,232]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】
+[2019-04-04 09:08:16,444]-[INFO]-[日志信息]:=====第7条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】
+[2019-04-04 09:14:44,515]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py
+[2019-04-04 09:14:44,515]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100083",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py
+[2019-04-04 09:14:44,729]-[INFO]-[日志信息]:=====第1条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py
+[2019-04-04 09:14:44,730]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py
+[2019-04-04 09:14:44,730]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py
+[2019-04-04 09:14:44,945]-[INFO]-[日志信息]:=====第2条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py
+[2019-04-04 09:14:44,946]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py
+[2019-04-04 09:14:44,946]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py
+[2019-04-04 09:14:45,397]-[INFO]-[日志信息]:=====第3条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py
+[2019-04-04 09:14:45,397]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py
+[2019-04-04 09:14:45,397]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py
+[2019-04-04 09:14:46,253]-[INFO]-[日志信息]:=====第4条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py
+[2019-04-04 09:14:46,253]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py
+[2019-04-04 09:14:46,254]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py
+[2019-04-04 09:14:46,972]-[INFO]-[日志信息]:=====第5条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py
+[2019-04-04 09:14:46,973]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py
+[2019-04-04 09:14:46,973]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py
+[2019-04-04 09:14:47,448]-[INFO]-[日志信息]:=====第6条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py
+[2019-04-04 09:14:47,449]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py
+[2019-04-04 09:14:47,449]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py
+[2019-04-04 09:14:47,902]-[INFO]-[日志信息]:=====第7条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py
+[2019-04-04 09:31:27,770]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log
+[2019-04-04 09:31:27,770]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100084",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log
+[2019-04-04 09:31:28,041]-[INFO]-[日志信息]:=====第1条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log
+[2019-04-04 09:31:28,042]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log
+[2019-04-04 09:31:28,042]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log
+[2019-04-04 09:31:28,326]-[INFO]-[日志信息]:=====第2条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log
+[2019-04-04 09:31:28,326]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log
+[2019-04-04 09:31:28,327]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log
+[2019-04-04 09:31:28,529]-[INFO]-[日志信息]:=====第3条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log
+[2019-04-04 09:31:28,530]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log
+[2019-04-04 09:31:28,530]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log
+[2019-04-04 09:31:28,723]-[INFO]-[日志信息]:=====第4条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log
+[2019-04-04 09:31:28,724]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log
+[2019-04-04 09:31:28,724]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log
+[2019-04-04 09:31:29,006]-[INFO]-[日志信息]:=====第5条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log
+[2019-04-04 09:31:29,006]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log
+[2019-04-04 09:31:29,006]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log
+[2019-04-04 09:31:29,225]-[INFO]-[日志信息]:=====第6条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log
+[2019-04-04 09:31:29,225]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log
+[2019-04-04 09:31:29,225]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log
+[2019-04-04 09:31:29,477]-[INFO]-[日志信息]:=====第7条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log
+[2019-04-04 09:32:58,911]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log
+[2019-04-04 09:32:58,912]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100085",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log
+[2019-04-04 09:32:59,124]-[INFO]-[日志信息]:=====第1条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log
+[2019-04-04 09:32:59,125]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log
+[2019-04-04 09:32:59,125]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log
+[2019-04-04 09:32:59,322]-[INFO]-[日志信息]:=====第2条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log
+[2019-04-04 09:32:59,322]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log
+[2019-04-04 09:32:59,323]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log
+[2019-04-04 09:32:59,523]-[INFO]-[日志信息]:=====第3条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log
+[2019-04-04 09:32:59,523]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log
+[2019-04-04 09:32:59,523]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log
+[2019-04-04 09:32:59,769]-[INFO]-[日志信息]:=====第4条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log
+[2019-04-04 09:32:59,769]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log
+[2019-04-04 09:32:59,769]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log
+[2019-04-04 09:33:00,000]-[INFO]-[日志信息]:=====第5条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log
+[2019-04-04 09:33:00,000]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log
+[2019-04-04 09:33:00,001]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log
+[2019-04-04 09:33:00,229]-[INFO]-[日志信息]:=====第6条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log
+[2019-04-04 09:33:00,230]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log
+[2019-04-04 09:33:00,230]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log
+[2019-04-04 09:33:00,452]-[INFO]-[日志信息]:=====第7条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log
+[2019-04-04 09:34:45,390]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-04-04 09:34:45,390]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100086",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-04-04 09:34:45,610]-[INFO]-[日志信息]:=====第1条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-04-04 09:34:45,610]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-04-04 09:34:45,610]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-04-04 09:34:45,837]-[INFO]-[日志信息]:=====第2条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-04-04 09:34:45,837]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-04-04 09:34:45,838]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-04-04 09:34:46,068]-[INFO]-[日志信息]:=====第3条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-04-04 09:34:46,069]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-04-04 09:34:46,069]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-04-04 09:34:46,304]-[INFO]-[日志信息]:=====第4条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-04-04 09:34:46,305]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-04-04 09:34:46,305]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-04-04 09:34:46,523]-[INFO]-[日志信息]:=====第5条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-04-04 09:34:46,524]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-04-04 09:34:46,524]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-04-04 09:34:46,723]-[INFO]-[日志信息]:=====第6条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-04-04 09:34:46,723]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-04-04 09:34:46,723]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-04-04 09:34:46,921]-[INFO]-[日志信息]:=====第7条用例结束======-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-04-09 01:49:00,374]-[ERROR]-[日志信息]:你好-【E:/learning_python_class/api_project_3/common/my_log.py】-my_log.py-my_log-my_log-31
+[2019-09-30 15:18:33,361]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-09-30 15:18:33,382]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100087",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-09-30 15:18:34,598]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-09-30 15:18:34,598]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-09-30 15:18:35,686]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-09-30 15:18:35,686]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-09-30 15:18:36,785]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-09-30 15:18:36,785]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-09-30 15:18:37,881]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-09-30 15:18:37,882]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-09-30 15:18:38,980]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-09-30 15:18:38,981]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-09-30 15:18:40,076]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-09-30 15:18:40,076]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:39:10,566]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:39:10,591]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100088",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:39:11,810]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:39:11,810]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:39:12,992]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:39:12,992]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:39:14,164]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:39:14,164]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:39:15,340]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:39:15,341]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:39:16,524]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:39:16,525]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:39:17,710]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:39:17,711]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:40:08,070]-[INFO]-[日志信息]:开始执行第1条用例,用例的标题是正常注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:40:08,070]-[INFO]-[日志信息]:测试数据为{'Case_id': 1, 'Moudle': 'register', 'Title': '正常注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13999100089",\'pwd\':"123456"}', 'Sql': None, 'ExpectResult': '{"status":1,"code":"10001","data":None,"msg":"注册成功"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:40:09,251]-[INFO]-[日志信息]:开始执行第2条用例,用例的标题是输入已经注册的手机号-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:40:09,251]-[INFO]-[日志信息]:测试数据为{'Case_id': 2, 'Moudle': 'register', 'Title': '输入已经注册的手机号', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13888888886","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20110","data":None,"msg":"手机号码已被注册"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:40:10,435]-[INFO]-[日志信息]:开始执行第3条用例,用例的标题是手机号码为空注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:40:10,435]-[INFO]-[日志信息]:测试数据为{'Case_id': 3, 'Moudle': 'register', 'Title': '手机号码为空注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"手机号不能为空"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:40:11,609]-[INFO]-[日志信息]:开始执行第4条用例,用例的标题是密码为空进行注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:40:11,610]-[INFO]-[日志信息]:测试数据为{'Case_id': 4, 'Moudle': 'register', 'Title': '密码为空进行注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13977887676","pwd":""}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20103","data":None,"msg":"密码不能为空"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:40:12,783]-[INFO]-[日志信息]:开始执行第5条用例,用例的标题是输入小于六位的手机号注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:40:12,784]-[INFO]-[日志信息]:测试数据为{'Case_id': 5, 'Moudle': 'register', 'Title': '输入小于六位的手机号注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"13577","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:40:13,963]-[INFO]-[日志信息]:开始执行第6条用例,用例的标题是输入大于11位的手机号进行注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:40:13,963]-[INFO]-[日志信息]:测试数据为{'Case_id': 6, 'Moudle': 'register', 'Title': '输入大于11位的手机号进行注册', 'Method': 'GET', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778876763","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:40:15,142]-[INFO]-[日志信息]:开始执行第7条用例,用例的标题是输入带有特殊字符的手机号注册-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27
+[2019-10-01 14:40:15,143]-[INFO]-[日志信息]:测试数据为{'Case_id': 7, 'Moudle': 'register', 'Title': '输入带有特殊字符的手机号注册', 'Method': 'POST', 'Url': 'http://47.107.168.87:8080/futureloan/mvc/api/member/register', 'Params': '{"mobilephone":"135778@7#73","pwd":"123456"}', 'Sql': None, 'ExpectResult': '{"status":0,"code":"20109","data":None,"msg":"手机号码格式不正确"}'}-【E:\learning_python_class\api_project_3\common\my_log.py】-my_log.py-my_log-my_log-27

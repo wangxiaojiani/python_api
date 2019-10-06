@@ -22,3 +22,5 @@ test_log_path =os.path.join(data_path,"Result","test_log","api.log")
 #配置文件的目录
 api_config_path=os.path.join(data_path,"case_conf","api.conf")
 
+
+

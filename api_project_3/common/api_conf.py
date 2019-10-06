@@ -4,8 +4,8 @@ from configparser import ConfigParser
 from api_project_3.common import project_path
 class MyConfig:
     def __init__(self):
-        self.mc =ConfigParser()
-        self.mc.read(project_path.api_config_path,encoding="utf-8")
+        self.mc =ConfigParser() #实例化
+        self.mc.read(project_path.api_config_path,encoding="utf-8") #打开配置文件 这里要注意要设置编码格式
 
     def get_str(self,option,section):
         return self.mc.get(option,section)

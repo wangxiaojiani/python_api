@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
-# Created by xj on 2019/3/25
+# # -*- coding: utf-8 -*-
+# # Created by xj on 2019/3/25
 import re
-
+#
 target ='{"mobilephone":"#13888888886#","pwd":"#123456#"}'
 
 """match  search  findall finditer sub
@@ -25,11 +25,15 @@ s="{'memberId':#member_id#,'title':'借钱修别墅啦','amount':100000,'loanRat
 v=re.search('#(.+?)#',s)
 print(v.group(1))
 
-p='#(.+?)#'
-target2 ='{"mobilephone":"#username#","pwd":"#password#"}'
-while re.search(p,target2):
-    m=re.search(p,target2)
-    key=m.group(1)
-    getattr(Getdata,key)
-    target2=re.sub(p,value,target2,count=1)
+# p='#(.+?)#'
+# target2 ='{"mobilephone":"#username#","pwd":"#password#"}'
+# while re.search(p,target2):
+#     m=re.search(p,target2)
+#     key=m.group(1)
+#     getattr(Getdata,key)
+#     target2=re.sub(p,value,target2,count=1)
 
+
+#
+s="123485678"
+print(s[-2:-1])

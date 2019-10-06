@@ -1,12 +1,9 @@
-# -*- coding: utf-8 -*-
+ # -*- coding: utf-8 -*-
 # Created by xj on 2019/3/10
 
 from openpyxl import workbook,load_workbook
 from api_project_3.common.api_conf import MyConfig
 from api_project_3.common.project_path import test_data_path
-import re
-
-
 
 class DoExcel:
     def __init__(self,file_path,sheetname):
@@ -105,7 +102,7 @@ class DoExcel:
             final_data = test_data  # 把测试用例赋值给final_data这个变量
         else:  # 否则 如果是列表 那就获取列表里面指定id的用例的数据
             for i in button:  # 遍历case_id 里面的值
-                final_data.append(test_data[i - 1])  # 对应关系要清晰
+                final_data.append(test_data[i-1])  # 对应关系要清晰
         return final_data
 
     def write_back(self,row,colunm,value):#向excel中写回测试结果
@@ -118,6 +115,8 @@ class DoExcel:
         wb=workbook.Workbook()
         wb.create_sheet(self.sheetname)
         wb.save(self.file_path)
+
+
 
 if __name__ == '__main__':
     button =MyConfig().get_list("INVEST","button")

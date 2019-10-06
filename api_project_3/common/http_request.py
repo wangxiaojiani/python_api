@@ -38,7 +38,7 @@ if __name__ == '__main__':
     param = {"mobilephone":"137786","pwd":"123456"}  # 字典的形式存储参数数据
     method = 'GET'
 
-    resp = HttpRequest( url,method, param).http_request()
+    resp = HttpRequest( url,method, param).http_request('None')
     print(resp.text)
     print(resp.headers)
 

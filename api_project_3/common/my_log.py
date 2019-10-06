@@ -9,7 +9,7 @@ class MyLog:
         logger.setLevel("DEBUG")#设置日志收集器级别
         if not logger.handlers:
             #设置日志输出格式
-            formatter =logging.Formatter('[%(asctime)s]-[%(levelname)s]-[日志信息]:%(message)s')
+            formatter =logging.Formatter('[%(asctime)s]-[%(levelname)s]-[日志信息]:%(message)s-【%(pathname)s】-%(filename)s-%(module)s-%(funcName)s-%(lineno)d')
 
             ch = logging.StreamHandler() #输出渠道默认为控制台
             ch.setLevel("ERROR") #设置级别
@@ -44,4 +44,5 @@ class MyLog:
         self.my_log("ERROR",msg)
     def critical(self,msg):
         self.my_log("CRITICAL",msg)
-
+if __name__ == '__main__':
+    MyLog().error('你好')

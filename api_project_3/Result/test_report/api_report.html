@@ -116,19 +116,19 @@ function html_escape(s) {
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">API测试报告</h1>
 <p class='attribute'><strong>测试人员 : </strong> xj</p>
-<p class='attribute'><strong>开始时间 : </strong> 2019-03-28 22:13:28</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:18.462464</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 30，通过 30，通过率= 100.00%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2019-09-30 15:18:33</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:07.825369</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 7，错误 7，通过率= 0.00%</p>
 
 <p class='description'>登录与注册的get请求用例</p>
 </div>
 
 
 <p id='show_detail_line'>
-<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 100.00% }</a>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 0.00% }</a>
 <a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
-<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 30 }</a>
-<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 30 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 0 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 7 }</a>
 </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
 <colgroup>
@@ -148,29 +148,38 @@ function html_escape(s) {
     <td>详细</td>
 </tr>
 
-<tr class='passClass warning'>
+<tr class='errorClass warning'>
     <td>api_project_3.test_data.register_test_case.HttpTest</td>
     <td class="text-center">7</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
     <td class="text-center">7</td>
-    <td class="text-center">0</td>
-    <td class="text-center">0</td>
     <td class="text-center"><a href="javascript:showClassDetail('c1',7)" class="detail" id='c1'>详细</a></td>
 </tr>
 
-<tr id='pt1_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_1: dict() -> new empty dictionary</div></td>
+<tr id='ft1_1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_2_1_正常注册</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
-    <div id='div_pt1_1' class="collapse">  -->
+    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
+    <div id='div_ft1_1' class="collapse">  -->
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
-    <div id='div_pt1_1' class="collapse in" align="left">
+    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
+    <div id='div_ft1_1' class="collapse in" align="left">
     <pre>
     
-pt1_1: 开始执行用例啦
+ft1_1: 开始执行用例啦
 正在发起get请求
+错误是HTTPConnectionPool(host='47.107.168.87', port=8080): Max retries exceeded with url: /futureloan/mvc/api/member/register?mobilephone=13999100087&amp;pwd=123456 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000026C645BD438&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
 用例执行完毕啦
+Traceback (most recent call last):
+  File "C:\Users\1\AppData\Local\Programs\Python\Python37\lib\site-packages\ddt.py", line 153, in wrapper
+    return func(self, *args, **kwargs)
+  File "E:\learning_python_class\api_project_3\test_data\register_test_case.py", line 34, in test_2
+    resp_t=HttpRequest(url,method,eval(param)).http_request(cookie)
+  File "E:\learning_python_class\api_project_3\common\http_request.py", line 33, in http_request
+    return resp #返回结果
+UnboundLocalError: local variable 'resp' referenced before assignment
 
 
     </pre>
@@ -178,20 +187,29 @@ pt1_1: 开始执行用例啦
     </td>
 </tr>
 
-<tr id='pt1_2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_2: dict() -> new empty dictionary</div></td>
+<tr id='ft1_2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_2_2_输入已经注册的手机号</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
-    <div id='div_pt1_2' class="collapse">  -->
+    <button id='btn_ft1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_2'>错误</button>
+    <div id='div_ft1_2' class="collapse">  -->
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
-    <div id='div_pt1_2' class="collapse in" align="left">
+    <button id='btn_ft1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_2'>错误</button>
+    <div id='div_ft1_2' class="collapse in" align="left">
     <pre>
     
-pt1_2: 开始执行用例啦
+ft1_2: 开始执行用例啦
 正在发起get请求
+错误是HTTPConnectionPool(host='47.107.168.87', port=8080): Max retries exceeded with url: /futureloan/mvc/api/member/register?mobilephone=13888888886&amp;pwd=123456 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000026C645BDC18&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
 用例执行完毕啦
+Traceback (most recent call last):
+  File "C:\Users\1\AppData\Local\Programs\Python\Python37\lib\site-packages\ddt.py", line 153, in wrapper
+    return func(self, *args, **kwargs)
+  File "E:\learning_python_class\api_project_3\test_data\register_test_case.py", line 34, in test_2
+    resp_t=HttpRequest(url,method,eval(param)).http_request(cookie)
+  File "E:\learning_python_class\api_project_3\common\http_request.py", line 33, in http_request
+    return resp #返回结果
+UnboundLocalError: local variable 'resp' referenced before assignment
 
 
     </pre>
@@ -199,20 +217,29 @@ pt1_2: 开始执行用例啦
     </td>
 </tr>
 
-<tr id='pt1_3' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_3: dict() -> new empty dictionary</div></td>
+<tr id='ft1_3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_2_3_手机号码为空注册</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
-    <div id='div_pt1_3' class="collapse">  -->
+    <button id='btn_ft1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_3'>错误</button>
+    <div id='div_ft1_3' class="collapse">  -->
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
-    <div id='div_pt1_3' class="collapse in" align="left">
+    <button id='btn_ft1_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_3'>错误</button>
+    <div id='div_ft1_3' class="collapse in" align="left">
     <pre>
     
-pt1_3: 开始执行用例啦
+ft1_3: 开始执行用例啦
 正在发起post请求
+错误是HTTPConnectionPool(host='47.107.168.87', port=8080): Max retries exceeded with url: /futureloan/mvc/api/member/register (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000026C64595CC0&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
 用例执行完毕啦
+Traceback (most recent call last):
+  File "C:\Users\1\AppData\Local\Programs\Python\Python37\lib\site-packages\ddt.py", line 153, in wrapper
+    return func(self, *args, **kwargs)
+  File "E:\learning_python_class\api_project_3\test_data\register_test_case.py", line 34, in test_2
+    resp_t=HttpRequest(url,method,eval(param)).http_request(cookie)
+  File "E:\learning_python_class\api_project_3\common\http_request.py", line 33, in http_request
+    return resp #返回结果
+UnboundLocalError: local variable 'resp' referenced before assignment
 
 
     </pre>
@@ -220,20 +247,29 @@ pt1_3: 开始执行用例啦
     </td>
 </tr>
 
-<tr id='pt1_4' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_4: dict() -> new empty dictionary</div></td>
+<tr id='ft1_4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_2_4_密码为空进行注册</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
-    <div id='div_pt1_4' class="collapse">  -->
+    <button id='btn_ft1_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_4'>错误</button>
+    <div id='div_ft1_4' class="collapse">  -->
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
-    <div id='div_pt1_4' class="collapse in" align="left">
+    <button id='btn_ft1_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_4'>错误</button>
+    <div id='div_ft1_4' class="collapse in" align="left">
     <pre>
     
-pt1_4: 开始执行用例啦
+ft1_4: 开始执行用例啦
 正在发起post请求
+错误是HTTPConnectionPool(host='47.107.168.87', port=8080): Max retries exceeded with url: /futureloan/mvc/api/member/register (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000026C64595470&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
 用例执行完毕啦
+Traceback (most recent call last):
+  File "C:\Users\1\AppData\Local\Programs\Python\Python37\lib\site-packages\ddt.py", line 153, in wrapper
+    return func(self, *args, **kwargs)
+  File "E:\learning_python_class\api_project_3\test_data\register_test_case.py", line 34, in test_2
+    resp_t=HttpRequest(url,method,eval(param)).http_request(cookie)
+  File "E:\learning_python_class\api_project_3\common\http_request.py", line 33, in http_request
+    return resp #返回结果
+UnboundLocalError: local variable 'resp' referenced before assignment
 
 
     </pre>
@@ -241,20 +277,29 @@ pt1_4: 开始执行用例啦
     </td>
 </tr>
 
-<tr id='pt1_5' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_5: dict() -> new empty dictionary</div></td>
+<tr id='ft1_5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_2_5_输入小于六位的手机号注册</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
-    <div id='div_pt1_5' class="collapse">  -->
+    <button id='btn_ft1_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_5'>错误</button>
+    <div id='div_ft1_5' class="collapse">  -->
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
-    <div id='div_pt1_5' class="collapse in" align="left">
+    <button id='btn_ft1_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_5'>错误</button>
+    <div id='div_ft1_5' class="collapse in" align="left">
     <pre>
     
-pt1_5: 开始执行用例啦
+ft1_5: 开始执行用例啦
 正在发起get请求
+错误是HTTPConnectionPool(host='47.107.168.87', port=8080): Max retries exceeded with url: /futureloan/mvc/api/member/register?mobilephone=13577&amp;pwd=123456 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000026C64467A20&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
 用例执行完毕啦
+Traceback (most recent call last):
+  File "C:\Users\1\AppData\Local\Programs\Python\Python37\lib\site-packages\ddt.py", line 153, in wrapper
+    return func(self, *args, **kwargs)
+  File "E:\learning_python_class\api_project_3\test_data\register_test_case.py", line 34, in test_2
+    resp_t=HttpRequest(url,method,eval(param)).http_request(cookie)
+  File "E:\learning_python_class\api_project_3\common\http_request.py", line 33, in http_request
+    return resp #返回结果
+UnboundLocalError: local variable 'resp' referenced before assignment
 
 
     </pre>
@@ -262,20 +307,29 @@ pt1_5: 开始执行用例啦
     </td>
 </tr>
 
-<tr id='pt1_6' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_6: dict() -> new empty dictionary</div></td>
+<tr id='ft1_6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_2_6_输入大于11位的手机号进行注册</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
-    <div id='div_pt1_6' class="collapse">  -->
+    <button id='btn_ft1_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_6'>错误</button>
+    <div id='div_ft1_6' class="collapse">  -->
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
-    <div id='div_pt1_6' class="collapse in" align="left">
+    <button id='btn_ft1_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_6'>错误</button>
+    <div id='div_ft1_6' class="collapse in" align="left">
     <pre>
     
-pt1_6: 开始执行用例啦
+ft1_6: 开始执行用例啦
 正在发起get请求
+错误是HTTPConnectionPool(host='47.107.168.87', port=8080): Max retries exceeded with url: /futureloan/mvc/api/member/register?mobilephone=135778876763&amp;pwd=123456 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000026C64467390&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
 用例执行完毕啦
+Traceback (most recent call last):
+  File "C:\Users\1\AppData\Local\Programs\Python\Python37\lib\site-packages\ddt.py", line 153, in wrapper
+    return func(self, *args, **kwargs)
+  File "E:\learning_python_class\api_project_3\test_data\register_test_case.py", line 34, in test_2
+    resp_t=HttpRequest(url,method,eval(param)).http_request(cookie)
+  File "E:\learning_python_class\api_project_3\common\http_request.py", line 33, in http_request
+    return resp #返回结果
+UnboundLocalError: local variable 'resp' referenced before assignment
 
 
     </pre>
@@ -283,532 +337,29 @@ pt1_6: 开始执行用例啦
     </td>
 </tr>
 
-<tr id='pt1_7' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_7: dict() -> new empty dictionary</div></td>
+<tr id='ft1_7' class='none'>
+    <td class='errorCase'><div class='testcase'>test_2_7_输入带有特殊字符的手机号注册</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_7'>通过</button>
-    <div id='div_pt1_7' class="collapse">  -->
+    <button id='btn_ft1_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_7'>错误</button>
+    <div id='div_ft1_7' class="collapse">  -->
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_7'>通过</button>
-    <div id='div_pt1_7' class="collapse in" align="left">
+    <button id='btn_ft1_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_7'>错误</button>
+    <div id='div_ft1_7' class="collapse in" align="left">
     <pre>
     
-pt1_7: 开始执行用例啦
+ft1_7: 开始执行用例啦
 正在发起post请求
+错误是HTTPConnectionPool(host='47.107.168.87', port=8080): Max retries exceeded with url: /futureloan/mvc/api/member/register (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000026C64595860&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
 用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr class='passClass warning'>
-    <td>api_project_3.test_data.recharge_test_case.HttpTest</td>
-    <td class="text-center">9</td>
-    <td class="text-center">9</td>
-    <td class="text-center">0</td>
-    <td class="text-center">0</td>
-    <td class="text-center"><a href="javascript:showClassDetail('c2',9)" class="detail" id='c2'>详细</a></td>
-</tr>
-
-<tr id='pt2_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_1: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
-    <div id='div_pt2_1' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
-    <div id='div_pt2_1' class="collapse in" align="left">
-    <pre>
-    
-pt2_1: 开始执行用例啦
-正在发起get请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt2_2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_2: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
-    <div id='div_pt2_2' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
-    <div id='div_pt2_2' class="collapse in" align="left">
-    <pre>
-    
-pt2_2: 开始执行用例啦
-C:\Users\1\AppData\Local\Programs\Python\Python37\lib\site-packages\pymysql\cursors.py:170: Warning: (1292, "Truncated incorrect DOUBLE value: '${mobilephone}'")
-  result = self._query(query)
-正在发起post请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt2_3' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_3: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt2_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_3'>通过</button>
-    <div id='div_pt2_3' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt2_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_3'>通过</button>
-    <div id='div_pt2_3' class="collapse in" align="left">
-    <pre>
-    
-pt2_3: 开始执行用例啦
-正在发起post请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt2_4' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_4: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt2_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_4'>通过</button>
-    <div id='div_pt2_4' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt2_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_4'>通过</button>
-    <div id='div_pt2_4' class="collapse in" align="left">
-    <pre>
-    
-pt2_4: 开始执行用例啦
-正在发起post请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt2_5' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_5: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt2_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_5'>通过</button>
-    <div id='div_pt2_5' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt2_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_5'>通过</button>
-    <div id='div_pt2_5' class="collapse in" align="left">
-    <pre>
-    
-pt2_5: 开始执行用例啦
-正在发起post请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt2_6' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_6: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt2_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_6'>通过</button>
-    <div id='div_pt2_6' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt2_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_6'>通过</button>
-    <div id='div_pt2_6' class="collapse in" align="left">
-    <pre>
-    
-pt2_6: 开始执行用例啦
-正在发起post请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt2_7' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_7: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt2_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_7'>通过</button>
-    <div id='div_pt2_7' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt2_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_7'>通过</button>
-    <div id='div_pt2_7' class="collapse in" align="left">
-    <pre>
-    
-pt2_7: 开始执行用例啦
-正在发起post请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt2_8' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_8: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt2_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_8'>通过</button>
-    <div id='div_pt2_8' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt2_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_8'>通过</button>
-    <div id='div_pt2_8' class="collapse in" align="left">
-    <pre>
-    
-pt2_8: 开始执行用例啦
-正在发起get请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt2_9' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_9: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt2_9' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_9'>通过</button>
-    <div id='div_pt2_9' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt2_9' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_9'>通过</button>
-    <div id='div_pt2_9' class="collapse in" align="left">
-    <pre>
-    
-pt2_9: 开始执行用例啦
-正在发起get请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr class='passClass warning'>
-    <td>api_project_3.test_data.addloan_test_case.HttpTest</td>
-    <td class="text-center">7</td>
-    <td class="text-center">7</td>
-    <td class="text-center">0</td>
-    <td class="text-center">0</td>
-    <td class="text-center"><a href="javascript:showClassDetail('c3',7)" class="detail" id='c3'>详细</a></td>
-</tr>
-
-<tr id='pt3_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_1: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt3_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_1'>通过</button>
-    <div id='div_pt3_1' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt3_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_1'>通过</button>
-    <div id='div_pt3_1' class="collapse in" align="left">
-    <pre>
-    
-pt3_1: 开始执行用例啦
-正在发起get请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt3_2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_2: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt3_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_2'>通过</button>
-    <div id='div_pt3_2' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt3_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_2'>通过</button>
-    <div id='div_pt3_2' class="collapse in" align="left">
-    <pre>
-    
-pt3_2: 开始执行用例啦
-正在发起get请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt3_3' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_3: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt3_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_3'>通过</button>
-    <div id='div_pt3_3' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt3_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_3'>通过</button>
-    <div id='div_pt3_3' class="collapse in" align="left">
-    <pre>
-    
-pt3_3: 开始执行用例啦
-正在发起get请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt3_4' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_4: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt3_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_4'>通过</button>
-    <div id='div_pt3_4' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt3_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_4'>通过</button>
-    <div id='div_pt3_4' class="collapse in" align="left">
-    <pre>
-    
-pt3_4: 开始执行用例啦
-正在发起get请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt3_5' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_5: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt3_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_5'>通过</button>
-    <div id='div_pt3_5' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt3_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_5'>通过</button>
-    <div id='div_pt3_5' class="collapse in" align="left">
-    <pre>
-    
-pt3_5: 开始执行用例啦
-正在发起post请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt3_6' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_6: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt3_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_6'>通过</button>
-    <div id='div_pt3_6' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt3_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_6'>通过</button>
-    <div id='div_pt3_6' class="collapse in" align="left">
-    <pre>
-    
-pt3_6: 开始执行用例啦
-正在发起get请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt3_7' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_7: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt3_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_7'>通过</button>
-    <div id='div_pt3_7' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt3_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_7'>通过</button>
-    <div id='div_pt3_7' class="collapse in" align="left">
-    <pre>
-    
-pt3_7: 开始执行用例啦
-正在发起get请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr class='passClass warning'>
-    <td>api_project_3.test_data.invest_test_case.HttpTest</td>
-    <td class="text-center">7</td>
-    <td class="text-center">7</td>
-    <td class="text-center">0</td>
-    <td class="text-center">0</td>
-    <td class="text-center"><a href="javascript:showClassDetail('c4',7)" class="detail" id='c4'>详细</a></td>
-</tr>
-
-<tr id='pt4_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_1: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt4_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_1'>通过</button>
-    <div id='div_pt4_1' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt4_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_1'>通过</button>
-    <div id='div_pt4_1' class="collapse in" align="left">
-    <pre>
-    
-pt4_1: 开始执行用例啦
-正在发起get请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt4_2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_2: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt4_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_2'>通过</button>
-    <div id='div_pt4_2' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt4_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_2'>通过</button>
-    <div id='div_pt4_2' class="collapse in" align="left">
-    <pre>
-    
-pt4_2: 开始执行用例啦
-正在发起get请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt4_3' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_3: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt4_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_3'>通过</button>
-    <div id='div_pt4_3' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt4_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_3'>通过</button>
-    <div id='div_pt4_3' class="collapse in" align="left">
-    <pre>
-    
-pt4_3: 开始执行用例啦
-正在发起post请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt4_4' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_4: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt4_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_4'>通过</button>
-    <div id='div_pt4_4' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt4_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_4'>通过</button>
-    <div id='div_pt4_4' class="collapse in" align="left">
-    <pre>
-    
-pt4_4: 开始执行用例啦
-正在发起get请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt4_5' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_5: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt4_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_5'>通过</button>
-    <div id='div_pt4_5' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt4_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_5'>通过</button>
-    <div id='div_pt4_5' class="collapse in" align="left">
-    <pre>
-    
-pt4_5: 开始执行用例啦
-正在发起get请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt4_6' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_6: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt4_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_6'>通过</button>
-    <div id='div_pt4_6' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt4_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_6'>通过</button>
-    <div id='div_pt4_6' class="collapse in" align="left">
-    <pre>
-    
-pt4_6: 开始执行用例啦
-正在发起get请求
-用例执行完毕啦
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt4_7' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_2_7: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt4_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_7'>通过</button>
-    <div id='div_pt4_7' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt4_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_7'>通过</button>
-    <div id='div_pt4_7' class="collapse in" align="left">
-    <pre>
-    
-pt4_7: 开始执行用例啦
-正在发起get请求
-用例执行完毕啦
+Traceback (most recent call last):
+  File "C:\Users\1\AppData\Local\Programs\Python\Python37\lib\site-packages\ddt.py", line 153, in wrapper
+    return func(self, *args, **kwargs)
+  File "E:\learning_python_class\api_project_3\test_data\register_test_case.py", line 34, in test_2
+    resp_t=HttpRequest(url,method,eval(param)).http_request(cookie)
+  File "E:\learning_python_class\api_project_3\common\http_request.py", line 33, in http_request
+    return resp #返回结果
+UnboundLocalError: local variable 'resp' referenced before assignment
 
 
     </pre>
@@ -818,11 +369,11 @@ pt4_7: 开始执行用例啦
 
 <tr id='total_row' class="text-center active">
     <td>总计</td>
-    <td>30</td>
-    <td>30</td>
+    <td>7</td>
     <td>0</td>
     <td>0</td>
-    <td>通过率：100.00%</td>
+    <td>7</td>
+    <td>通过率：0.00%</td>
 </tr>
 </table>
 

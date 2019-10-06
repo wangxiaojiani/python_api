@@ -9,8 +9,6 @@ from api_project_3.common import project_path
 from api_project_3.common.my_log import MyLog
 from api_project_3.common.get_data import GetData
 from api_project_3.common.do_mysql import DoMysql
-
-import re
 from api_project_3.common.get_data import re_replace
 test_data =DoExcel(project_path.test_data_path, "recharge").read_excel("RECHARGE")
 

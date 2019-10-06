@@ -58,14 +58,14 @@ class HttpTest(unittest.TestCase):
     #     resp_t = HttpRequest(case["Url"], case["Method"],eval(case["Params"])).http_request()  # 若想用post方法 直接将eval(param)改成data=eval(param)
     #     try:
     #         self.assertEqual(eval(case["ExpectResult"]),resp_t.json())  # 判断期望结果与实际结果是否相等  为了安全起见这里用json字典格式做对比
-    #         test_result = "Pass"  # 如果没报错 执行结果为pass
+    #         result = "Pass"  # 如果没报错 执行结果为pass
     #     except Exception as e:
     #         mylog.error("报错了，报错信息为{}".format(e))
-    #         test_result = "Failed"  # 如果报错执行结果为failed
+    #         result = "Failed"  # 如果报错执行结果为failed
     #         raise e  # 注意要抛出异常否则用例会被执行
     #     finally:
     #         self.t.write_back(case["Case_id"]+1,8,resp_t.text)  # 写回实际结果 是要以字符串的方式进行写回的
-    #         self.t.write_back(case["Case_id"],9, test_result)  # 写入测试结果
+    #         self.t.write_back(case["Case_id"],9, result)  # 写入测试结果
     #         mylog.info("=====第{}条用例结束======".format(case["Case_id"]))
 
 

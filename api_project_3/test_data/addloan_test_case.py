@@ -47,10 +47,6 @@ class HttpTest(unittest.TestCase):
             setattr(GetData,'loanid',str(loan_id[0]))  #这里是通过索引来取loadid元组中的第一个loadid
 
         param=get_data.re_replace(case['Params'])   #参数化+正则+反射  一行代码解决问题
-
-
-
-
         # else:
         #     param =case["Params"]
         resp_t=HttpRequest(url,method,eval(param)).http_request(getattr(GetData,"cookie"))   #getattr(类名,"属性名") 来动态获取cookie
@@ -71,6 +67,7 @@ class HttpTest(unittest.TestCase):
             self.t.write_back(case["Case_id"]+1,9,str(resp_t.json())) #写回实际结果 是要以字符串的方式进行写回的
             self.t.write_back(case["Case_id"]+1,10,test_result_2) #写入测试结果
             mylog.info("=====第{}条用例结束======".format(case["Case_id"]))
+
 
 
 

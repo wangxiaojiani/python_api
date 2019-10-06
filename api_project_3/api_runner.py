@@ -5,7 +5,7 @@ import os
 curpath=os.path.abspath(os.path.dirname(__file__)) #获取当前目录名称
 rootpath=os.path.split(curpath)[0]  #获取当前目录的绝对路径后取到根路径
 sys.path.append(rootpath) #python编译的系统路径中加入根路径
-# os.path.append("./")  #这两种方法都行 老师用的
+# os.path.append("./")  #这两种方法都行 老师用的  sys.path python的编译路径
 
 import unittest
 import HTMLTestRunnerNew

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息维护</title>
+</head>
+<style>
+    fieldset{
+        background: lightsteelblue;
+        border: #5cb85c;
+        border-radius: 2px;
+        margin-bottom: 12px;
+        overflow: hidden;
+        padding: 0.625em;
+    }
+    span{
+        cursor: pointer;
+        display: inline-block;
+        padding: 3px 6px;
+        text-align: left;
+        width: 70px;
+        vertical-align: top;
+    }
+</style>
+<body>
+    <form action="http://127.0.0.1:5000/login" method="get">
+        <fieldset>
+        <div>
+            <span>用户名:</span><input type="text" name="姓名" id="count">
+        </div>
+            <input type='file' name='mmm'>
+        <div>
+            <span>密码:</span><input type="password" name="密码" id="pwd">
+        </div>
+        <div>
+        性别:<input type="radio" name="sex" checked value="男">男
+            <input type="radio" name="sex" value="女">女
+        </div>
+        <div>
+            头像:<input type="file" name="image">
+        </div>
+        <div>
+        住址:<select><option>广东</option></select>省&nbsp;&nbsp;
+            <select><option>深圳</option></select>市</div>
+        <div>
+        爱好:<input type="checkbox" name="favour sport" value="篮球">篮球
+        <input type="checkbox" name="favour sport" value="足球" checked>足球
+            <input type="checkbox" name="favour sport" value="看书" >看书
+        </div>
+        <div>
+        备注信息:<textarea name="备注">这是我的第一个网页</textarea></div>
+        <input type="submit" value="登录" onclick="alertme()" onmouseleave="green(this)" onmouseover="red(this)">
+        <input type="reset">
+        </fieldset>
+    </form>
+    <script>
+       function alertme() {
+        var  count = document.getElementById('count');
+        var  pwd=document.getElementById('pwd');
+           window.alert('用户名:'+count.value+'  密码:'+pwd.value);
+       }
+       function red(ele) {
+           ele.style.color='red'
+
+       }
+       function green(ele) {
+           ele.style.color='green'
+
+       }
+
+
+
+
+    </script>
+</body>
+</html>

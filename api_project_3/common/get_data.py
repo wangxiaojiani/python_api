@@ -4,7 +4,7 @@ from api_project_3.common.api_conf import MyConfig
 import re
 class GetData:
     """类的反射可以动态查看，增加，删除，修改类或者实例的属性"""
-    cookie =None
+    # cookie =None
     LOAN_ID =None #加标
     AMOUNT_NUM =0
     ADD_MONEY=0 #充值后的金额
@@ -31,11 +31,11 @@ def re_replace(target):#target 表示字典里读取的字符串
 
 if __name__ == '__main__':
     # print(getattr(GetData,"cookie")) #查看属性值
-    # print(setattr(GetData,"cookie","1234")) #没有返回值，设置属性值
-    # print(getattr(GetData, "cookie"))
-    # print(hasattr(GetData,"cookie")) #判断是否有这个属性值
-    # print(delattr(GetData,"cookie")) #删除属性值
+    print(setattr(GetData,"cookie","1234")) #没有返回值，设置属性值
+    print(getattr(GetData, "cookie"))
+    print(hasattr(GetData,"cookie")) #判断是否有这个属性值
+    print(delattr(GetData,"cookie")) #删除属性值
 
-    target2 = '{"mobilephone":"#m_mobile#","pwd":"#pwd#"}'
-    s=re_replace(target2)
-    print(s)
+    # target2 = '{"mobilephone":"m_mobile","pwd":"pwd"}'
+    # s=re_replace(target2)
+    # print(s)

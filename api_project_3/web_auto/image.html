@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>更改图片</title>
+</head>
+    <body>
+    <script>
+        function changeimg()
+        {
+            element=document.getElementById("demo");
+            if (element.src.match("58PIChbY")){
+                element.src='/i/eg_bulboff.gif';
+            }
+            else{
+                element.src="http://pic.58pic.com/58pic/13/48/85/35m58PIChbY_1024.jpg";
+            }
+        }
+    </script>
+    <img src="http://pic.58pic.com/58pic/13/48/85/35m58PIChbY_1024.jpg" onclick="changeimg()" id="demo">
+
+
+
+    </body>
+</html>
