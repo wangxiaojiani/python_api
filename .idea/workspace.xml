@@ -5,41 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18f9a326-7ca3-4750-9e7c-9406e25c5bc9" name="Default" comment="更改syspath">
-      <change beforePath="" afterPath="$PROJECT_DIR$/test_auto_interface/comon/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test_auto_interface/comon/api_conf.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test_auto_interface/comon/do_excel.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test_auto_interface/comon/do_mysql.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test_auto_interface/comon/get.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test_auto_interface/comon/my_log.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test_auto_interface/comon/my_path.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test_auto_interface/comon/test_request.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test_auto_interface/result/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test_auto_interface/runner.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test_auto_interface/test_conf/api.conf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test_auto_interface/test_data/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test_auto_interface/test_data/login_test.py" />
-      <change beforePath="$PROJECT_DIR$/api_project_2/common/test_case.py" afterPath="$PROJECT_DIR$/api_project_2/common/test_case.py" />
-      <change beforePath="$PROJECT_DIR$/api_project_3/Result/test_log/api.log" afterPath="$PROJECT_DIR$/api_project_3/Result/test_log/api.log" />
-      <change beforePath="$PROJECT_DIR$/api_project_3/Result/test_report/api_report.html" afterPath="$PROJECT_DIR$/api_project_3/Result/test_report/api_report.html" />
-      <change beforePath="$PROJECT_DIR$/api_project_3/api_runner.py" afterPath="$PROJECT_DIR$/api_project_3/api_runner.py" />
-      <change beforePath="$PROJECT_DIR$/api_project_3/case_conf/api.conf" afterPath="$PROJECT_DIR$/api_project_3/case_conf/api.conf" />
-      <change beforePath="$PROJECT_DIR$/api_project_3/common/api_conf.py" afterPath="$PROJECT_DIR$/api_project_3/common/api_conf.py" />
-      <change beforePath="$PROJECT_DIR$/api_project_3/common/do_excel.py" afterPath="$PROJECT_DIR$/api_project_3/common/do_excel.py" />
-      <change beforePath="$PROJECT_DIR$/api_project_3/common/do_mysql.py" afterPath="$PROJECT_DIR$/api_project_3/common/do_mysql.py" />
-      <change beforePath="$PROJECT_DIR$/api_project_3/common/get_data.py" afterPath="$PROJECT_DIR$/api_project_3/common/get_data.py" />
-      <change beforePath="$PROJECT_DIR$/api_project_3/common/http_request.py" afterPath="$PROJECT_DIR$/api_project_3/common/http_request.py" />
-      <change beforePath="$PROJECT_DIR$/api_project_3/common/learn_re.py" afterPath="$PROJECT_DIR$/api_project_3/common/learn_re.py" />
-      <change beforePath="$PROJECT_DIR$/api_project_3/common/my_log.py" afterPath="$PROJECT_DIR$/api_project_3/common/my_log.py" />
-      <change beforePath="$PROJECT_DIR$/api_project_3/common/project_path.py" afterPath="$PROJECT_DIR$/api_project_3/common/project_path.py" />
-      <change beforePath="$PROJECT_DIR$/api_project_3/test_data/API_TEST.xlsx" afterPath="$PROJECT_DIR$/api_project_3/test_data/API_TEST.xlsx" />
-      <change beforePath="$PROJECT_DIR$/api_project_3/test_data/addloan_test_case.py" afterPath="$PROJECT_DIR$/api_project_3/test_data/addloan_test_case.py" />
-      <change beforePath="$PROJECT_DIR$/api_project_3/test_data/recharge_test_case.py" afterPath="$PROJECT_DIR$/api_project_3/test_data/recharge_test_case.py" />
-      <change beforePath="$PROJECT_DIR$/homework_package/work_20190308/www.py" afterPath="$PROJECT_DIR$/homework_package/work_20190308/www.py" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/week_10/class_0318/API_4/common/project_path.py" afterPath="$PROJECT_DIR$/week_10/class_0318/API_4/common/project_path.py" />
-      <change beforePath="$PROJECT_DIR$/week_10/class_0320/API_5/common/project_path.py" afterPath="$PROJECT_DIR$/week_10/class_0320/API_5/common/project_path.py" />
-      <change beforePath="$PROJECT_DIR$/week_9/API_2/common/project_path.py" afterPath="$PROJECT_DIR$/week_9/API_2/common/project_path.py" />
-      <change beforePath="$PROJECT_DIR$/week_9/API_3/common/project_path.py" afterPath="$PROJECT_DIR$/week_9/API_3/common/project_path.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/test_auto_interface/runner.py" afterPath="$PROJECT_DIR$/test_auto_interface/runner.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -117,22 +84,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="runner.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="runner.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_auto_interface/runner.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
-              <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+              <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api_runner.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="api_runner.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api_project_3/api_runner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="58" />
-              <folding />
+            <state relative-caret-position="38">
+              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding>
+                <element signature="e#53#63#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -205,10 +174,10 @@
         <option value="$PROJECT_DIR$/test_auto_interface/comon/get.py" />
         <option value="$PROJECT_DIR$/api_project_3/common/project_path.py" />
         <option value="$PROJECT_DIR$/test_auto_interface/comon/my_path.py" />
-        <option value="$PROJECT_DIR$/test_auto_interface/runner.py" />
         <option value="$PROJECT_DIR$/test_auto_interface/comon/do_excel.py" />
         <option value="$PROJECT_DIR$/test_auto_interface/test_conf/api.conf" />
         <option value="$PROJECT_DIR$/test_auto_interface/test_data/login_test.py" />
+        <option value="$PROJECT_DIR$/test_auto_interface/runner.py" />
       </list>
     </option>
   </component>
@@ -218,7 +187,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="708" />
     <option name="y" value="3" />
     <option name="width" value="665" />
@@ -273,7 +242,7 @@
             <path>
               <item name="learning_python_class" type="b2602c69:ProjectViewProjectNode" />
               <item name="learning_python_class" type="462c0819:PsiDirectoryNode" />
-              <item name="api_project_3" type="462c0819:PsiDirectoryNode" />
+              <item name="test_auto_interface" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -493,14 +462,15 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31466228" sideWeight="0.3517398" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784185" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31466228" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31466228" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2306425" sideWeight="0.64826024" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3930921" sideWeight="0.49377915" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39209226" sideWeight="0.49377915" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22995462" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -856,7 +826,7 @@
         <state relative-caret-position="2033">
           <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
           <folding>
-            <element signature="e#55#98#0" expanded="true" />
+            <element signature="e#55#98#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -882,7 +852,7 @@
         <state relative-caret-position="684">
           <caret line="40" column="58" lean-forward="false" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
           <folding>
-            <element signature="e#157#172#0" expanded="true" />
+            <element signature="e#157#172#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -892,7 +862,7 @@
         <state relative-caret-position="703">
           <caret line="44" column="66" lean-forward="false" selection-start-line="44" selection-start-column="66" selection-end-line="44" selection-end-column="66" />
           <folding>
-            <element signature="e#53#68#0" expanded="true" />
+            <element signature="e#53#68#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -933,7 +903,17 @@
         <state relative-caret-position="280">
           <caret line="42" column="40" lean-forward="false" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
           <folding>
-            <element signature="e#150#188#0" expanded="true" />
+            <element signature="e#150#188#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api_project_3/api_runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#53#63#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -941,15 +921,7 @@
     <entry file="file://$PROJECT_DIR$/test_auto_interface/runner.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
-          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api_project_3/api_runner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="58" />
+          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
           <folding />
         </state>
       </provider>

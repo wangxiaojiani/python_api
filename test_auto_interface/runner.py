@@ -4,7 +4,8 @@
 #@Email     :1027867874@qq.com
 #@File      :runner.py
 #@Software  :PyCharm
-
+import sys
+sys.path.append('./')
 import unittest
 from test_auto_interface.comon.my_path import test_report_path
 import time
